@@ -34,6 +34,9 @@ class _mainpageState extends State<mainpage> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.purple.shade100,
+        appBar: AppBar(
+          title: Text("ImageApp"),
+        ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -144,6 +147,7 @@ class _mainpageState extends State<mainpage> {
         ),
       ),
     );
+
     //new
   }
 }
