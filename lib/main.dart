@@ -49,49 +49,47 @@ class _mainpageState extends State<mainpage> {
                     return InkWell(
                       onTap: () {
                         if (!boollist[index]) {
-                         if(t==1 || t==2)
-                           {
-                             boollist[index] = true;
-
-                           }
-                         if (t == 1) {
-                           print("click=$t");
-                           one = pnglist[index];
-                           a = index;
-                           t = 3;
-                           Future.delayed(Duration(milliseconds: 10))
-                               .then((value) {
-                             setState(() {
-                               t = 2;
-                             });
-                           });
-                         }
-                         if (t == 2) {
-                           print("click=$t");
-                           two = pnglist[index];
-                           b = index;
-                           if (one == two) {
-                             print("match");
-                             t = 3;
-                             Future.delayed(Duration(milliseconds: 1000))
-                                 .then((value) {
-                               setState(() {
-                                 t = 1;
-                               });
-                             });
-                           } else {
-                             print("not match");
-                             t = 3;
-                             Future.delayed(Duration(milliseconds: 1000))
-                                 .then((value) {
-                               setState(() {
-                                 boollist[a] = false;
-                                 boollist[b] = false;
-                                 t = 1;
-                               });
-                             });
-                           }
-                         }
+                          if (t == 1 || t == 2) {
+                            boollist[index] = true;
+                          }
+                          if (t == 1) {
+                            print("click=$t");
+                            one = pnglist[index];
+                            a = index;
+                            t = 3;
+                            Future.delayed(Duration(milliseconds: 10))
+                                .then((value) {
+                              setState(() {
+                                t = 2;
+                              });
+                            });
+                          }
+                          if (t == 2) {
+                            print("click=$t");
+                            two = pnglist[index];
+                            b = index;
+                            if (one == two) {
+                              print("match");
+                              t = 3;
+                              Future.delayed(Duration(milliseconds: 1000))
+                                  .then((value) {
+                                setState(() {
+                                  t = 1;
+                                });
+                              });
+                            } else {
+                              print("not match");
+                              t = 3;
+                              Future.delayed(Duration(milliseconds: 1000))
+                                  .then((value) {
+                                setState(() {
+                                  boollist[a] = false;
+                                  boollist[b] = false;
+                                  t = 1;
+                                });
+                              });
+                            }
+                          }
                         }
 
                         setState(() {});
@@ -146,5 +144,6 @@ class _mainpageState extends State<mainpage> {
         ),
       ),
     );
+    //new
   }
 }
